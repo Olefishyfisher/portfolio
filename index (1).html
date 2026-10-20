@@ -1,0 +1,77 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Miguel Duran-Diaz | Portfolio</title><meta name="description" content="I draw structures on paper and build everything else in code, plastic, and silicon."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap" rel="stylesheet"><style>:root{--bg:#eef2f4;--ink:#0c3f73;--mute:#47688a;--rule:#0c3f7340;--grid:#0c3f7313;--acc:#9a6200;--paper:#f8fbfc}
+[data-theme=dark]{--bg:#0c3f73;--ink:#eaf3ff;--mute:#a9c4e4;--rule:#eaf3ff47;--grid:#eaf3ff15;--acc:#ffd23f;--paper:#0f4a85}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.6 Barlow,system-ui,sans-serif;
+background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:28px 28px}
+#app{max-width:70rem;margin:0 auto;padding:1.25rem 1.5rem 3rem}
+h1,h2,h3{font-family:'Barlow Condensed',Barlow,sans-serif;font-weight:700;line-height:1.05;margin:0}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+.nav{display:flex;flex-wrap:wrap;gap:1.25rem;align-items:center;font-weight:500;border-bottom:1px solid var(--rule);padding-bottom:.75rem}
+.nav a{text-decoration:none}.nav a:hover{text-decoration:underline;text-decoration-color:var(--acc);text-underline-offset:5px}
+.theme{margin-left:auto;font:inherit;font-size:.9rem;color:var(--ink);background:none;border:1px solid var(--rule);padding:.25rem .7rem;cursor:pointer}
+.theme:hover{border-color:var(--acc)}
+h1{font-size:clamp(3.2rem,11vw,8rem);letter-spacing:-.01em;margin-top:3.5rem}
+.dim{display:flex;align-items:center;gap:1rem;margin:1.1rem 0;color:var(--mute);animation:draw 1.2s ease-out}
+.dim::before,.dim::after{content:"";flex:1;height:13px;background:linear-gradient(var(--ink),var(--ink)) left/1px 100% no-repeat,linear-gradient(var(--ink),var(--ink)) right/1px 100% no-repeat,linear-gradient(var(--ink),var(--ink)) center/100% 1px no-repeat}
+@keyframes draw{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0)}}
+.tag{font-size:1.35rem;max-width:36rem;margin:0 0 4.5rem}
+section{margin-bottom:4rem;scroll-margin-top:1rem}
+.sh{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;border-bottom:2px solid var(--ink);padding-bottom:.4rem;margin-bottom:1.5rem}
+h2{font-size:2.4rem}.sheet{color:var(--mute);font-size:.95rem}
+.prose{max-width:40rem}.prose p{margin:0 0 1rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.25rem}
+.chips button{font:inherit;font-size:.95rem;color:var(--ink);background:none;border:1px solid var(--rule);padding:.2rem .8rem;cursor:pointer}
+.chips button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(19rem,1fr));gap:1.25rem}
+.card{background:var(--paper);border:1px solid var(--ink);padding:1.1rem 1.1rem 0;display:flex;flex-direction:column}
+.card[hidden]{display:none}
+.card header{display:flex;justify-content:space-between;align-items:flex-start;gap:.75rem}
+.card h3{font-size:1.65rem}
+.card p{margin:.6rem 0 1rem;flex:1}
+.stamp{font-weight:500;font-size:.85rem;color:var(--acc);border:1px solid var(--acc);padding:0 .5rem;white-space:nowrap;transform:rotate(-2deg)}
+.tb{display:grid;margin:0 -1.1rem;border-top:1px solid var(--ink)}
+.tb div{display:flex;gap:.75rem;padding:.3rem 1.1rem;border-bottom:1px solid var(--rule);font-size:.92rem}
+.tb div:last-child{border-bottom:0}
+.tb dt{width:3.6rem;color:var(--mute)}.tb dd{margin:0}
+.more{display:block;margin:0 -1.1rem;padding:.55rem 1.1rem;border-top:1px solid var(--ink);font-weight:500;text-decoration:none}
+.more:hover{background:var(--ink);color:var(--bg)}
+.tl{list-style:none;margin:0;padding:0;border-left:2px solid var(--ink)}
+.tl li{display:grid;grid-template-columns:9rem 1fr;gap:1rem;padding:0 0 1.75rem 1.25rem;position:relative}
+.tl li::before{content:"";position:absolute;left:-7px;top:.45rem;width:12px;height:12px;background:var(--bg);border:2px solid var(--acc);border-radius:50%}
+.when{color:var(--mute)}.tl h3{font-size:1.6rem}.tl p{margin:.25rem 0 0;max-width:38rem}.tl .org{color:var(--mute)}
+.foot{display:grid;grid-template-columns:1fr auto;gap:1rem 2rem;border:1px solid var(--ink);background:var(--paper);padding:1.1rem}
+.foot p{margin:.2rem 0 0}.links{display:flex;gap:1.25rem;align-items:center}.small{grid-column:1/-1;color:var(--mute);font-size:.9rem;border-top:1px solid var(--rule);padding-top:.6rem}
+@media(max-width:40rem){.tl li{grid-template-columns:1fr;gap:.2rem}.foot{grid-template-columns:1fr}.theme{margin-left:0}}
+@media(prefers-reduced-motion:reduce){.dim{animation:none}html{scroll-behavior:auto}}
+
+:root{--bg:#eef2f4;--ink:#0c3f73;--mute:#47688a;--acc:#9a6200;--paper:#f8fbfc;--rule:#0c3f7347;--grid:#0c3f7315}[data-theme=dark]{--bg:#0c3f73;--ink:#eaf3ff;--mute:#a9c4e4;--acc:#ffd23f;--paper:#0f4a85;--rule:#eaf3ff47;--grid:#eaf3ff15}
+body{font-family:'Barlow',system-ui,sans-serif;background-size:28px 28px}h1,h2,h3{font-family:'Barlow Condensed','Barlow',sans-serif}#app{max-width:70rem}
+</style></head><body><div id="app"></div><script type="application/json" id="site-data">{"name":"Miguel Duran-Diaz","role":"Civil Engineering, Temple University, Expected May 2029","tagline":"I draw structures on paper and build everything else in code, plastic, and silicon.","contact":{"email":"work.duran.miguel@gmail.com","github":"","linkedin":"https://www.linkedin.com/in/miguel-duran-diaz/","location":"Philadelphia, PA and Boston, MA"},"sections":[{"id":"about","title":"About","sheet":"A-101","type":"text","body":["Civil engineering student at Temple University, expected May 2029. I’m drawn to civil and environmental work: the infrastructure that quietly decides how people live.","Alongside class I lead AI work at Temple’s Small Business Development Center, run a campus traffic study, and build tools with Python, custom GPTs, and ESP32 hardware.","Bilingual in English and Spanish. Based in Philadelphia and Boston."]},{"id":"projects","title":"Projects","sheet":"P-201","type":"cards","items":[{"title":"Campus Traffic Study","status":"In progress","date":"2026","scale":"3 intersections","tags":["Civil"],"blurb":"Counting pedestrians, bikes, and vehicles at three Temple intersections during class changeovers, then analyzing crash data and crossing behavior to recommend safety improvements."},{"title":"The Miguel Chronical","status":"Live","date":"2026","scale":"Personal","tags":["Web"],"blurb":"A satirical publication in crimson and blackletter, built from plug-in parts and hosted on GitHub Pages."},{"title":"Custom GPTs","status":"Ongoing","scale":"Tools","tags":["AI"],"blurb":"Purpose-built assistants that automate research and workflow tasks."},{"title":"Python Data Projects","status":"Ongoing","scale":"Analysis","tags":["Data"],"blurb":"Scripts and notebooks that turn messy data into something you can decide with."},{"title":"Chrome Extensions","status":"Ongoing","scale":"Tools","tags":["Web"],"blurb":"Small browser tools that remove repeated clicks from daily work."},{"title":"ESP32 and 3D Printing","status":"Ongoing","scale":"Prototype","tags":["Hardware"],"blurb":"Microcontroller prototypes with 3D-printed parts designed from scratch."},{"title":"Maine Documentary","status":"Concept","scale":"Zero budget","tags":["Film"],"blurb":"A documentary set in Maine and Acadia, built on an A plot and a B plot."}]},{"id":"experience","title":"Experience and Education","sheet":"E-301","type":"timeline","items":[{"when":"May 2026 to present","what":"Assistant Business Consultant","where":"Small Business Development Center, Temple University","blurb":"Led work on a nationwide AI framework for small business owners, in collaboration with Google, the U.S. government, and the PA state government. Developed AI-driven advisor tools, assessments, and workflows to support SBDC consulting."},{"when":"Oct 2025 to Apr 2026","what":"Growth Lead","where":"Homie (OpenAI Startup)","blurb":"Led user acquisition and growth strategy across digital channels, growing app usage 30%. Partnered with the founders and product team to shape market strategy for an early-stage AI startup."},{"when":"2023 to 2025","what":"Lead Associate","where":"TJX / Marshalls","blurb":"Supervised a team of 5 associates and worked with management to run daily floor operations. Resolved customer needs and escalations."},{"when":"Expected May 2029","what":"B.S. Civil Engineering","where":"Temple University","blurb":"Structures, materials, and environmental systems, with a hands-on lab track."}]},{"id":"leadership","title":"Leadership","sheet":"L-401","type":"timeline","items":[{"when":"2024 to 2025","what":"Theater Director and President","where":"Millbury Drama Club","blurb":"Directed a theater program of around 90 members and managed a low five-figure budget."},{"when":"2022 to 2025","what":"VP and School Board Member","where":"Student Advisory Council, Town of Millbury","blurb":"Elected to represent over 750 students. Proposed and implemented a $2.2 million reinvestment into critical infrastructure."}]},{"id":"coursework","title":"Coursework","sheet":"C-401","type":"cards","items":[{"title":"CEE 2011 Materials Lab","status":"In progress","date":"Fall 2026","scale":"Lab reports","tags":["Materials"],"blurb":"Aggregate testing: specific gravity and absorption (ASTM C127), bulk density (C29), and gradation (C136) checked against C33 limits."}]},{"id":"skills","title":"Skills","sheet":"S-601","type":"cards","items":[{"title":"Design and analysis","blurb":"Autodesk CAD, SolidWorks, Autodesk Revit, ArcGIS"},{"title":"Programming and hardware","blurb":"Python, ESP32 microcontroller programming, 3D printing"},{"title":"AI and software","blurb":"Custom GPTs, AI workflow design, Microsoft Office, Google Suite"},{"title":"Languages","blurb":"English and Spanish (bilingual)"}]},{"id":"awards","title":"Awards","sheet":"R-701","type":"cards","items":[{"title":"Envirothon Competition Award","status":"1st place","scale":"State of Massachusetts","blurb":"Won first place out of 25 schools."},{"title":"AP Scholar with Honors","status":"Twice","scale":"College Board","blurb":"Awarded by the College Board two times."}]},{"id":"field","title":"Field Notes","sheet":"F-501","type":"cards","items":[{"title":"Acadia National Park","status":"Planning","date":"Summer","scale":"4 days","tags":["Outdoors"],"blurb":"Hiking plan built around Precipice and Beehive."},{"title":"Birding","status":"Ongoing","scale":"Field","tags":["Outdoors"],"blurb":"Species lists and sightings from trails and campuses."},{"title":"Film Photography","status":"Ongoing","scale":"35 mm","tags":["Photo"],"blurb":"Rolls shot on film, with scans added as they come back."}]}],"design":{"dark":{"bg":"#0c3f73","ink":"#eaf3ff","mute":"#a9c4e4","acc":"#ffd23f","paper":"#0f4a85"},"light":{"bg":"#eef2f4","ink":"#0c3f73","mute":"#47688a","acc":"#9a6200","paper":"#f8fbfc"},"theme":"dark","head":"Barlow Condensed","body":"Barlow","grid":28,"width":70,"css":""}}</script><script>window.SITE=JSON.parse(document.getElementById('site-data').textContent);(()=>{const S=window.SITE,$=s=>document.querySelector(s);
+const h=(t,c,...k)=>{const e=document.createElement(t);if(c)e.className=c;k.flat(2).forEach(x=>e.append(x&&x.nodeType?x:document.createTextNode(x==null?'':x)));return e};
+const a=(u,t,c)=>{const e=h('a',c||'',t);e.href=u;if(/^https?:/.test(u)){e.target='_blank';e.rel='noopener'}return e};
+const card=i=>{const tags=i.tags||[],c=h('article','card');c.dataset.tags=tags.join('|');
+c.append(h('header','',h('h3','',i.title),i.status?h('span','stamp',i.status):''),h('p','',i.blurb),
+h('dl','tb',[['Date',i.date],['Scale',i.scale],['Tags',tags.join(', ')]].filter(r=>r[1]).map(r=>h('div','',h('dt','',r[0]),h('dd','',r[1])))));
+if(i.link)c.append(a(i.link,i.linkText||'View project','more'));return c};
+const R={text:s=>h('div','prose',s.body.map(p=>h('p','',p))),
+cards:s=>{const g=h('div','grid'),w=h('div'),tags=[...new Set(s.items.flatMap(i=>i.tags||[]))];
+if(tags.length>1){const bar=h('div','chips');['All',...tags].forEach((t,n)=>{const b=h('button',n?'':'on',t);
+b.onclick=()=>{bar.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));
+g.querySelectorAll('.card').forEach(c=>c.hidden=!!n&&!c.dataset.tags.split('|').includes(t))};bar.append(b)});w.append(bar)}
+s.items.forEach(i=>g.append(card(i)));w.append(g);return w},
+timeline:s=>h('ol','tl',s.items.map(i=>h('li','',h('span','when',i.when),h('div','',h('h3','',i.what),i.where?h('p','org',i.where):'',h('p','',i.blurb)))))};
+const sec=s=>{const e=h('section','',h('div','sh',h('h2','',s.title),s.sheet?h('span','sheet','Sheet '+s.sheet):''),(R[s.type]||R.text)(s));e.id=s.id;return e};
+const ct=S.contact||{},tg=h('button','theme','');
+const setT=m=>{document.documentElement.dataset.theme=m;tg.textContent=m==='dark'?'Switch to drafting film':'Switch to blueprint';try{localStorage.setItem('theme',m)}catch(e){}};
+tg.onclick=()=>setT(document.documentElement.dataset.theme==='dark'?'light':'dark');
+let saved;try{saved=localStorage.getItem('theme')}catch(e){}setT((window.__pv?0:saved)||(S.design&&S.design.theme)||'dark');
+document.title=S.name+' | Portfolio';
+const links=[['Email',ct.email&&'mailto:'+ct.email],['GitHub',ct.github],['LinkedIn',ct.linkedin]].filter(l=>l[1]).map(l=>a(l[1],l[0]));
+$('#app').replaceChildren(
+h('header','top',h('nav','nav',S.sections.map(s=>a('#'+s.id,s.title)),tg),h('h1','',S.name),h('div','dim',h('span','',S.role)),h('p','tag',S.tagline)),
+h('main','',S.sections.map(sec)),
+h('footer','foot',h('div','',h('strong','',S.name),h('p','',ct.location||'')),h('div','links',links),h('p','small','Drawn and built by hand. Edit content.js to update.')));
+})();
+</script></body></html>
